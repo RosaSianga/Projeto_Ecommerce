@@ -69,17 +69,99 @@ VALUES
 (21, 'Rua dos Andradas', 679, 'Apto 404', 'Centro Histórico', 'Porto Alegre', 'RS', '90030-200');
 
 
-INSERT INTO produto	 (categoria_id, nome_produto, descricao, estoque_disponivel) VALUES
-(1, 'Smartphone Galaxy S21', 'Smartphone com tela AMOLED de 6.2", 128GB, 8GB RAM', 50),
-(1, 'Notebook Dell Inspiron 15', 'Notebook com processador Intel i7, 16GB RAM, SSD 512GB', 30),
-(1, 'Fone de Ouvido Bluetooth JBL', 'Fone sem fio com cancelamento de ruído e bateria de longa duração', 100),
-(1, 'Smart TV Samsung 55"', 'Smart TV 4K UHD com HDR e Alexa integrada', 20),
-(1, 'Tablet Apple iPad Air', 'Tablet com tela Retina de 10.9", 64GB, chip A14 Bionic', 25),
-(1, 'Caixa de Som Bluetooth Sony', 'Caixa portátil com som estéreo potente e bateria de 12h', 75),
-(1, 'Monitor LG 27" 4K', 'Monitor UHD 4K com conexão HDMI e DisplayPort', 40),
-(1, 'Câmera Digital Canon EOS', 'Câmera DSLR com sensor CMOS de 24.1MP e lente 18-55mm', 15),
-(1, 'Smartwatch Xiaomi Mi Band 6', 'Pulseira inteligente com monitoramento de saúde e notificações', 80),
-(1, 'Roteador Wi-Fi TP-Link', 'Roteador dual band com velocidade até 1200Mbps e 4 antenas', 60);
+select * from ecommerce.endereco_de_entrega
+
+INSERT INTO ecommerce.produto	(categoria_id, nome_produto, descricao, preco, estoque_disponivel) VALUES
+(6, 'Bola de Basquete Profissional', 'Bola de basquete em couro sintético, ideal para quadras indoor e outdoor.', 139.90, 75),
+(6, 'Camisa Esportiva Dry-Fit', 'Camisa dry-fit com tecnologia de absorção de suor, ideal para treinos.', 59.90, 150),
+(6, 'Halter Emborrachado 10kg', 'Par de halteres emborrachados com pegada anatômica.', 189.00, 40),
+(6, 'Garrafa Térmica 1L', 'Garrafa térmica esportiva com isolamento térmico de até 12 horas.', 79.50, 200),
+(6, 'Bicicleta Speed Aro 700', 'Bicicleta speed com quadro de alumínio e 21 marchas.', 1999.00, 20),
+
+(1, 'Smartphone Android 128GB', 'Smartphone com tela AMOLED 6.5", câmera tripla e 128GB de armazenamento.', 1799.00, 50),
+(1, 'Notebook i5 8GB RAM 256GB SSD', 'Notebook com processador Intel i5, 8GB de RAM e SSD de 256GB.', 3299.00, 30),
+(1, 'Fone de Ouvido Bluetooth', 'Fone sem fio com cancelamento de ruído e estojo carregador.', 249.90, 100),
+(1, 'Smart TV 50" 4K', 'Smart TV com resolução 4K UHD, Wi-Fi integrado e aplicativos embarcados.', 2599.00, 25),
+(1, 'Carregador Turbo USB-C 30W', 'Carregador rápido com tecnologia Power Delivery e entrada USB-C.', 89.90, 150),
+
+(2, 'Jaqueta Jeans Oversized', 'Jaqueta jeans com corte oversized, estilo urbano e bolsos frontais.', 199.90, 40),
+(2, 'Tênis Branco Casual', 'Tênis casual unissex em couro sintético com solado emborrachado.', 149.90, 75),
+(2, 'Vestido Midi Estampado', 'Vestido midi com estampa floral, alças finas e tecido leve.', 179.00, 50),
+(2, 'Camisa Social Slim Fit', 'Camisa social masculina com corte slim e tecido de algodão.', 129.90, 60),
+(2, 'Bolsa Feminina Transversal', 'Bolsa transversal pequena com alça ajustável e fecho magnético.', 89.90, 90),
+
+(3, 'Creme Hidratante Corporal', 'Hidratante corporal com manteiga de karité e rápida absorção.', 34.90, 120),
+(3, 'Shampoo Nutritivo 300ml', 'Shampoo com óleo de argan, ideal para cabelos secos e danificados.', 29.90, 100),
+(3, 'Paleta de Sombras Nude', 'Paleta com 12 cores neutras de longa duração e alta pigmentação.', 59.90, 80),
+(3, 'Perfume Feminino Eau de Parfum 50ml', 'Fragrância floral frutada com notas de baunilha e jasmim.', 149.90, 60),
+(3, 'Protetor Solar FPS 50', 'Protetor solar facial com toque seco e alta proteção UVA/UVB.', 42.50, 150),
+
+(4, 'Arroz Integral 1kg', 'Arroz integral orgânico, fonte de fibras e ideal para dietas saudáveis.', 7.90, 200),
+(4, 'Feijão Preto 1kg', 'Feijão preto selecionado, ideal para preparo de feijoada e pratos típicos.', 8.50, 180),
+(4, 'Óleo de Coco 500ml', 'Óleo de coco extra virgem, prensado a frio, ideal para culinária e uso natural.', 22.90, 90),
+(4, 'Granola com Castanhas 250g', 'Granola crocante com castanhas e frutas secas, rica em fibras.', 14.90, 120),
+(4, 'Biscoito Integral de Aveia 150g', 'Biscoito integral com aveia e mel, sem adição de açúcar.', 5.99, 150),
+
+(7, 'Carrinho de Controle Remoto', 'Carrinho elétrico com controle remoto, alcance de 30 metros.', 149.90, 50),
+(7, 'Quebra-Cabeça 500 Peças', 'Quebra-cabeça colorido com 500 peças, para todas as idades.', 59.90, 80),
+(7, 'Boneca Barbie Fashion', 'Boneca Barbie com roupas fashion e acessórios variados.', 89.90, 70),
+(7, 'Blocos de Montar 200 Peças', 'Conjunto de blocos de montar para estimular a criatividade.', 79.90, 100),
+(7, 'Jogo de Tabuleiro Estratégia', 'Jogo de tabuleiro para 2 a 4 jogadores, com foco em estratégia.', 99.90, 40),
+
+(13, 'Conjunto de Panelas Antiaderentes 5 peças', 'Conjunto completo de panelas antiaderentes, com revestimento durável.', 299.90, 40),
+(13, 'Jogo de Talheres 24 peças', 'Jogo de talheres em aço inox, design moderno e resistente.', 149.90, 60),
+(13, 'Batedeira Elétrica 500W', 'Batedeira com múltiplas velocidades e tigela de aço inox.', 349.90, 25),
+(13, 'Cafeteira Elétrica 12 xícaras', 'Cafeteira elétrica com filtro removível e desligamento automático.', 199.90, 30),
+(13, 'Liquidificador 750W', 'Liquidificador potente com copo de vidro e várias velocidades.', 259.90, 50),
+(13, 'Espremedor de Frutas Manual', 'Espremedor manual prático para limões, laranjas e outras frutas.', 39.90, 100),
+(13, 'Jogo de Potes Herméticos 6 peças', 'Conjunto de potes herméticos para armazenamento de alimentos.', 79.90, 80),
+(13, 'Faqueiro Inox 48 peças', 'Faqueiro completo em inox, com design elegante e resistente.', 399.90, 20),
+(13, 'Panela de Pressão 4 litros', 'Panela de pressão com sistema de segurança e cabo ergonômico.', 179.90, 35),
+(13, 'Toalha de Mesa Retangular 1,5m', 'Toalha de mesa em tecido resistente, com estampa clássica.', 59.90, 90),
+
+(8, 'A Arte da Guerra', 'Livro clássico de estratégia militar escrito por Sun Tzu.', 39.90, 120),
+(8, 'Dom Casmurro', 'Romance de Machado de Assis sobre amor e ciúmes.', 29.90, 100),
+(8, 'O Pequeno Príncipe', 'História poética de Antoine de Saint-Exupéry, para todas as idades.', 34.90, 150),
+(8, '1984', 'Distopia de George Orwell que aborda temas de vigilância e controle.', 44.90, 90),
+(8, 'A Revolução dos Bichos', 'Fábula política de George Orwell sobre regimes totalitários.', 39.90, 80),
+(8, 'Harry Potter e a Pedra Filosofal', 'Primeiro livro da saga do jovem bruxo Harry Potter.', 49.90, 200),
+(8, 'O Senhor dos Anéis: A Sociedade do Anel', 'Livro de fantasia épica de J.R.R. Tolkien.', 59.90, 70),
+(8, 'Sapiens: Uma Breve História da Humanidade', 'Livro de Yuval Noah Harari que traça a evolução da humanidade.', 69.90, 60),
+(8, 'A Menina que Roubava Livros', 'Romance de Markus Zusak sobre a vida durante a Segunda Guerra Mundial.', 39.90, 110),
+(8, 'O Alquimista', 'Romance de Paulo Coelho sobre busca e autoconhecimento.', 29.90, 130);
+
+select * from ecommerce.produto
 
 
---preciso de 10 exemplos de produtos com os dados categoria_id, nome de produto, descricao, estoque_disponivel, onde o id_categoria seja um relacionado a eletronicos
+cliente_id, endereco_id, data_pedido, valor_total, status = pendente
+
+INSERT INTO ECOMMERCE.PEDIDO(CLIENTE_ID, ENDERECO_ID, DATA_PEDIDO, VALOR_TOTAL, STATUS) VALUES
+(3, 5, '2025-08-28 14:23:00', 139.90, 'Processando'),
+(7, 12, '2025-08-29 09:15:00', 397.50, 'Pendente'),
+(1, 1, '2025-08-30 17:45:00', 3299.00, 'Cancelado'),
+(15, 18, '2025-08-31 12:30:00', 2048.9, 'Enviado'),
+(9, 9, '2025-09-01 11:00:00', 349.80, 'Enviado'),
+(12, 3, '2025-09-01 16:10:00', 249.60, 'Entregue');
+
+select * from ecommerce.pedido
+
+select *
+from ecommerce.cliente
+where cliente_id in (3,7,1,15,9,12)
+
+select *
+from ecommerce.endereco_de_entrega
+where cliente_id in (5,12,1,18,9,3)
+
+insert into ecommerce.item_do_pedido(pedido_id, produto_id, quantidade) values 
+(7, 1, 1),
+(8, 4, 5),
+(9, 7, 1),
+(10, 8, 1),
+(10, 6, 1),
+(11, 11, 1),
+(11, 12, 1),
+(12, 16, 2),
+(12, 17, 1),
+(12, 19, 1);
+
