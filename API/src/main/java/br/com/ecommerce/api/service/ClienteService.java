@@ -17,11 +17,10 @@ public class ClienteService {
         clienteRepository = repo;
     }
 
-    //Lista
-    public List<Cliente> listaTodos(){
+    //Lista todos os clientes
+    public List<Cliente> listarTodos(){
 
-        System.out.println(clienteRepository.findAll());
-
+        // findAll vem do JpaRepository -  buscar tudo
         return clienteRepository.findAll();
 
     }

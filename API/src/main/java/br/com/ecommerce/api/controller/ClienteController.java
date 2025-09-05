@@ -1,8 +1,30 @@
 package br.com.ecommerce.api.controller;
 
-import java.util.List;
+import br.com.ecommerce.api.model.Cliente;
+import br.com.ecommerce.api.service.ClienteService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+@RestController
+@RequestMapping("/api/clientes")
 public class ClienteController {
+
+    // Injeção de dependência
+    private final ClienteService clienteService;
+
+    public ClienteController(ClienteService service) {
+        clienteService = service;
+    }
+
+   @GetMapping
+    public ResponseEntity<List<Cliente>> listarClientes() {
+       // ResponseEntity - Tipo especial para site
+        List<Cliente> clientes = clienteService.listarTodos();
+        return ResponseEntity.ok(clientes);
+    }
 
 
 }
