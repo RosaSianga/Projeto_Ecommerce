@@ -22,7 +22,7 @@ public class ClienteController {
    @GetMapping
     public ResponseEntity<List<Cliente>> listarClientes() {
        // ResponseEntity - Tipo especial para site
-        List<Cliente> clientes = clienteService.listarTodos();
+        List<Cliente> clientes = clienteService.listarClientes();
         return ResponseEntity.ok(clientes);
     }
 

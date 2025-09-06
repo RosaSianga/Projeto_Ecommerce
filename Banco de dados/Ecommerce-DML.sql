@@ -22,138 +22,138 @@ VALUES
 ('RENATO CARVALHO ALVES', 'RENATO.ALVES@EXAMPLE.COM', 'RENATO#111', '(91) 97654-4433', '2025-01-30 10:15:00'),
 ('SABRINA LIMA TORRES', 'SABRINA.TORRES@EXAMPLE.COM', 'SABRINA123', '(31) 93456-7788', '2024-06-22 16:45:00');
 
-select * from ecommerce.cliente
+SELECT * FROM ECOMMERCE.CLIENTE
 
-INSERT INTO ecommerce.categoria (nome_categoria, descricao) 
+INSERT INTO ECOMMERCE.CATEGORIA (NOME_CATEGORIA, DESCRICAO) 
 VALUES
-('Eletrônicos', 'Produtos eletrônicos como celulares, computadores e acessórios.'),
-('Moda', 'Roupas, calçados e acessórios de moda para todas as idades.'),
-('Beleza', 'Produtos de cuidados pessoais, maquiagem e cosméticos.'),
-('Alimentos', 'Produtos alimentícios frescos, congelados e enlatados.'),
-('Móveis', 'Móveis para casa, escritório e decoração.'),
-('Esportes', 'Equipamentos e acessórios esportivos para diversas modalidades.'),
-('Brinquedos', 'Brinquedos e jogos para crianças de várias idades.'),
-('Livros', 'Livros de diversos gêneros e para todas as idades.'),
-('Automotivo', 'Peças, acessórios e produtos para veículos automotores.'),
-('Informática', 'Computadores, periféricos, softwares e acessórios.'),
-('Jardinagem', 'Ferramentas e produtos para jardinagem e paisagismo.'),
-('Saúde', 'Produtos para saúde, bem-estar e cuidados médicos.'),
-('Casa e Cozinha', 'Utensílios domésticos, eletrodomésticos e artigos para cozinha.'),
-('Papelaria', 'Materiais de escritório, escolar e papelaria em geral.'),
-('Telefonia', 'Aparelhos telefônicos, smartphones e acessórios relacionados.');
+('ELETRÔNICOS', 'PRODUTOS ELETRÔNICOS COMO CELULARES, COMPUTADORES E ACESSÓRIOS.'),
+('MODA', 'ROUPAS, CALÇADOS E ACESSÓRIOS DE MODA PARA TODAS AS IDADES.'),
+('BELEZA', 'PRODUTOS DE CUIDADOS PESSOAIS, MAQUIAGEM E COSMÉTICOS.'),
+('ALIMENTOS', 'PRODUTOS ALIMENTÍCIOS FRESCOS, CONGELADOS E ENLATADOS.'),
+('MÓVEIS', 'MÓVEIS PARA CASA, ESCRITÓRIO E DECORAÇÃO.'),
+('ESPORTES', 'EQUIPAMENTOS E ACESSÓRIOS ESPORTIVOS PARA DIVERSAS MODALIDADES.'),
+('BRINQUEDOS', 'BRINQUEDOS E JOGOS PARA CRIANÇAS DE VÁRIAS IDADES.'),
+('LIVROS', 'LIVROS DE DIVERSOS GÊNEROS E PARA TODAS AS IDADES.'),
+('AUTOMOTIVO', 'PEÇAS, ACESSÓRIOS E PRODUTOS PARA VEÍCULOS AUTOMOTORES.'),
+('INFORMÁTICA', 'COMPUTADORES, PERIFÉRICOS, SOFTWARES E ACESSÓRIOS.'),
+('JARDINAGEM', 'FERRAMENTAS E PRODUTOS PARA JARDINAGEM E PAISAGISMO.'),
+('SAÚDE', 'PRODUTOS PARA SAÚDE, BEM-ESTAR E CUIDADOS MÉDICOS.'),
+('CASA E COZINHA', 'UTENSÍLIOS DOMÉSTICOS, ELETRODOMÉSTICOS E ARTIGOS PARA COZINHA.'),
+('PAPELARIA', 'MATERIAIS DE ESCRITÓRIO, ESCOLAR E PAPELARIA EM GERAL.'),
+('TELEFONIA', 'APARELHOS TELEFÔNICOS, SMARTPHONES E ACESSÓRIOS RELACIONADOS.');
 
-select * from ecommerce.categoria
+SELECT * FROM ECOMMERCE.CATEGORIA
 
-INSERT INTO ecommerce.endereco_de_entrega (cliente_id, logradouro, numero, complemento, bairro, cidade, estado, cep) 
+INSERT INTO ECOMMERCE.ENDERECO_DE_ENTREGA (CLIENTE_ID, LOGRADOURO, NUMERO, COMPLEMENTO, BAIRRO, CIDADE, ESTADO, CEP) 
 VALUES
-(1, 'Rua das Flores', 123, 'Apto 101', 'Jardim Primavera', 'São Paulo', 'SP', '01001-000'),
-(2, 'Avenida Brasil', 456, 'Casa', 'Centro', 'Rio de Janeiro', 'RJ', '20010-020'),
-(3, 'Travessa da Paz', 789, '', 'Vila Nova', 'Belo Horizonte', 'MG', '30120-030'),
-(4, 'Rua das Palmeiras', 321, 'Bloco B', 'Centro', 'Curitiba', 'PR', '80020-040'),
-(5, 'Alameda Santos', 654, 'Sala 5', 'Jardins', 'São Paulo', 'SP', '01419-001'),
-(6, 'Praça Sete', 987, '', 'Centro', 'Belo Horizonte', 'MG', '30110-050'),
-(7, 'Rua das Acácias', 135, 'Casa', 'Vila Mariana', 'São Paulo', 'SP', '04110-060'),
-(8, 'Avenida Atlântica', 246, 'Apto 502', 'Copacabana', 'Rio de Janeiro', 'RJ', '22070-070'),
-(9, 'Rua das Orquídeas', 357, '', 'Jardim América', 'São Paulo', 'SP', '01449-080'),
-(10, 'Travessa dos Jasmins', 468, 'Apto 201', 'Centro', 'Fortaleza', 'CE', '60010-090'),
-(11, 'Rua das Hortênsias', 579, '', 'Lourdes', 'Belo Horizonte', 'MG', '30140-100'),
-(12, 'Avenida dos Bandeirantes', 680, 'Bloco C', 'Moema', 'São Paulo', 'SP', '04532-110'),
-(13, 'Rua do Sol', 791, '', 'Centro', 'Porto Alegre', 'RS', '90010-120'),
-(14, 'Rua das Rosas', 802, 'Casa', 'Jardim Botânico', 'Curitiba', 'PR', '80210-130'),
-(15, 'Avenida Paulista', 913, 'Sala 101', 'Bela Vista', 'São Paulo', 'SP', '01311-140'),
-(16, 'Rua do Comércio', 124, '', 'Centro', 'Recife', 'PE', '50010-150'),
-(17, 'Rua da Praia', 235, 'Apto 303', 'Boa Viagem', 'Recife', 'PE', '51020-160'),
-(18, 'Travessa do Carmo', 346, '', 'Centro', 'Salvador', 'BA', '40010-170'),
-(19, 'Rua das Laranjeiras', 457, 'Casa', 'Laranjeiras', 'Rio de Janeiro', 'RJ', '22240-180'),
-(20, 'Avenida Ipiranga', 568, '', 'Centro', 'Porto Alegre', 'RS', '90020-190'),
-(21, 'Rua dos Andradas', 679, 'Apto 404', 'Centro Histórico', 'Porto Alegre', 'RS', '90030-200');
+(1, 'RUA DAS FLORES', 123, 'APTO 101', 'JARDIM PRIMAVERA', 'SÃO PAULO', 'SP', '01001-000'),
+(2, 'AVENIDA BRASIL', 456, 'CASA', 'CENTRO', 'RIO DE JANEIRO', 'RJ', '20010-020'),
+(3, 'TRAVESSA DA PAZ', 789, '', 'VILA NOVA', 'BELO HORIZONTE', 'MG', '30120-030'),
+(4, 'RUA DAS PALMEIRAS', 321, 'BLOCO B', 'CENTRO', 'CURITIBA', 'PR', '80020-040'),
+(5, 'ALAMEDA SANTOS', 654, 'SALA 5', 'JARDINS', 'SÃO PAULO', 'SP', '01419-001'),
+(6, 'PRAÇA SETE', 987, '', 'CENTRO', 'BELO HORIZONTE', 'MG', '30110-050'),
+(7, 'RUA DAS ACÁCIAS', 135, 'CASA', 'VILA MARIANA', 'SÃO PAULO', 'SP', '04110-060'),
+(8, 'AVENIDA ATLÂNTICA', 246, 'APTO 502', 'COPACABANA', 'RIO DE JANEIRO', 'RJ', '22070-070'),
+(9, 'RUA DAS ORQUÍDEAS', 357, '', 'JARDIM AMÉRICA', 'SÃO PAULO', 'SP', '01449-080'),
+(10, 'TRAVESSA DOS JASMINS', 468, 'APTO 201', 'CENTRO', 'FORTALEZA', 'CE', '60010-090'),
+(11, 'RUA DAS HORTÊNSIAS', 579, '', 'LOURDES', 'BELO HORIZONTE', 'MG', '30140-100'),
+(12, 'AVENIDA DOS BANDEIRANTES', 680, 'BLOCO C', 'MOEMA', 'SÃO PAULO', 'SP', '04532-110'),
+(13, 'RUA DO SOL', 791, '', 'CENTRO', 'PORTO ALEGRE', 'RS', '90010-120'),
+(14, 'RUA DAS ROSAS', 802, 'CASA', 'JARDIM BOTÂNICO', 'CURITIBA', 'PR', '80210-130'),
+(15, 'AVENIDA PAULISTA', 913, 'SALA 101', 'BELA VISTA', 'SÃO PAULO', 'SP', '01311-140'),
+(16, 'RUA DO COMÉRCIO', 124, '', 'CENTRO', 'RECIFE', 'PE', '50010-150'),
+(17, 'RUA DA PRAIA', 235, 'APTO 303', 'BOA VIAGEM', 'RECIFE', 'PE', '51020-160'),
+(18, 'TRAVESSA DO CARMO', 346, '', 'CENTRO', 'SALVADOR', 'BA', '40010-170'),
+(19, 'RUA DAS LARANJEIRAS', 457, 'CASA', 'LARANJEIRAS', 'RIO DE JANEIRO', 'RJ', '22240-180'),
+(20, 'AVENIDA IPIRANGA', 568, '', 'CENTRO', 'PORTO ALEGRE', 'RS', '90020-190'),
+(21, 'RUA DOS ANDRADAS', 679, 'APTO 404', 'CENTRO HISTÓRICO', 'PORTO ALEGRE', 'RS', '90030-200');
 
 
-select * from ecommerce.endereco_de_entrega
+SELECT * FROM ECOMMERCE.ENDERECO_DE_ENTREGA
 
-INSERT INTO ecommerce.produto	(categoria_id, nome_produto, descricao, preco, estoque_disponivel) VALUES
-(6, 'Bola de Basquete Profissional', 'Bola de basquete em couro sintético, ideal para quadras indoor e outdoor.', 139.90, 75),
-(6, 'Camisa Esportiva Dry-Fit', 'Camisa dry-fit com tecnologia de absorção de suor, ideal para treinos.', 59.90, 150),
-(6, 'Halter Emborrachado 10kg', 'Par de halteres emborrachados com pegada anatômica.', 189.00, 40),
-(6, 'Garrafa Térmica 1L', 'Garrafa térmica esportiva com isolamento térmico de até 12 horas.', 79.50, 200),
-(6, 'Bicicleta Speed Aro 700', 'Bicicleta speed com quadro de alumínio e 21 marchas.', 1999.00, 20),
+INSERT INTO ECOMMERCE.PRODUTO	(CATEGORIA_ID, NOME_PRODUTO, DESCRICAO, PRECO, ESTOQUE_DISPONIVEL) VALUES
+(6, 'BOLA DE BASQUETE PROFISSIONAL', 'BOLA DE BASQUETE EM COURO SINTÉTICO, IDEAL PARA QUADRAS INDOOR E OUTDOOR.', 139.90, 75),
+(6, 'CAMISA ESPORTIVA DRY-FIT', 'CAMISA DRY-FIT COM TECNOLOGIA DE ABSORÇÃO DE SUOR, IDEAL PARA TREINOS.', 59.90, 150),
+(6, 'HALTER EMBORRACHADO 10KG', 'PAR DE HALTERES EMBORRACHADOS COM PEGADA ANATÔMICA.', 189.00, 40),
+(6, 'GARRAFA TÉRMICA 1L', 'GARRAFA TÉRMICA ESPORTIVA COM ISOLAMENTO TÉRMICO DE ATÉ 12 HORAS.', 79.50, 200),
+(6, 'BICICLETA SPEED ARO 700', 'BICICLETA SPEED COM QUADRO DE ALUMÍNIO E 21 MARCHAS.', 1999.00, 20),
 
-(1, 'Smartphone Android 128GB', 'Smartphone com tela AMOLED 6.5", câmera tripla e 128GB de armazenamento.', 1799.00, 50),
-(1, 'Notebook i5 8GB RAM 256GB SSD', 'Notebook com processador Intel i5, 8GB de RAM e SSD de 256GB.', 3299.00, 30),
-(1, 'Fone de Ouvido Bluetooth', 'Fone sem fio com cancelamento de ruído e estojo carregador.', 249.90, 100),
-(1, 'Smart TV 50" 4K', 'Smart TV com resolução 4K UHD, Wi-Fi integrado e aplicativos embarcados.', 2599.00, 25),
-(1, 'Carregador Turbo USB-C 30W', 'Carregador rápido com tecnologia Power Delivery e entrada USB-C.', 89.90, 150),
+(1, 'SMARTPHONE ANDROID 128GB', 'SMARTPHONE COM TELA AMOLED 6.5", CÂMERA TRIPLA E 128GB DE ARMAZENAMENTO.', 1799.00, 50),
+(1, 'NOTEBOOK I5 8GB RAM 256GB SSD', 'NOTEBOOK COM PROCESSADOR INTEL I5, 8GB DE RAM E SSD DE 256GB.', 3299.00, 30),
+(1, 'FONE DE OUVIDO BLUETOOTH', 'FONE SEM FIO COM CANCELAMENTO DE RUÍDO E ESTOJO CARREGADOR.', 249.90, 100),
+(1, 'SMART TV 50" 4K', 'SMART TV COM RESOLUÇÃO 4K UHD, WI-FI INTEGRADO E APLICATIVOS EMBARCADOS.', 2599.00, 25),
+(1, 'CARREGADOR TURBO USB-C 30W', 'CARREGADOR RÁPIDO COM TECNOLOGIA POWER DELIVERY E ENTRADA USB-C.', 89.90, 150),
 
-(2, 'Jaqueta Jeans Oversized', 'Jaqueta jeans com corte oversized, estilo urbano e bolsos frontais.', 199.90, 40),
-(2, 'Tênis Branco Casual', 'Tênis casual unissex em couro sintético com solado emborrachado.', 149.90, 75),
-(2, 'Vestido Midi Estampado', 'Vestido midi com estampa floral, alças finas e tecido leve.', 179.00, 50),
-(2, 'Camisa Social Slim Fit', 'Camisa social masculina com corte slim e tecido de algodão.', 129.90, 60),
-(2, 'Bolsa Feminina Transversal', 'Bolsa transversal pequena com alça ajustável e fecho magnético.', 89.90, 90),
+(2, 'JAQUETA JEANS OVERSIZED', 'JAQUETA JEANS COM CORTE OVERSIZED, ESTILO URBANO E BOLSOS FRONTAIS.', 199.90, 40),
+(2, 'TÊNIS BRANCO CASUAL', 'TÊNIS CASUAL UNISSEX EM COURO SINTÉTICO COM SOLADO EMBORRACHADO.', 149.90, 75),
+(2, 'VESTIDO MIDI ESTAMPADO', 'VESTIDO MIDI COM ESTAMPA FLORAL, ALÇAS FINAS E TECIDO LEVE.', 179.00, 50),
+(2, 'CAMISA SOCIAL SLIM FIT', 'CAMISA SOCIAL MASCULINA COM CORTE SLIM E TECIDO DE ALGODÃO.', 129.90, 60),
+(2, 'BOLSA FEMININA TRANSVERSAL', 'BOLSA TRANSVERSAL PEQUENA COM ALÇA AJUSTÁVEL E FECHO MAGNÉTICO.', 89.90, 90),
 
-(3, 'Creme Hidratante Corporal', 'Hidratante corporal com manteiga de karité e rápida absorção.', 34.90, 120),
-(3, 'Shampoo Nutritivo 300ml', 'Shampoo com óleo de argan, ideal para cabelos secos e danificados.', 29.90, 100),
-(3, 'Paleta de Sombras Nude', 'Paleta com 12 cores neutras de longa duração e alta pigmentação.', 59.90, 80),
-(3, 'Perfume Feminino Eau de Parfum 50ml', 'Fragrância floral frutada com notas de baunilha e jasmim.', 149.90, 60),
-(3, 'Protetor Solar FPS 50', 'Protetor solar facial com toque seco e alta proteção UVA/UVB.', 42.50, 150),
+(3, 'CREME HIDRATANTE CORPORAL', 'HIDRATANTE CORPORAL COM MANTEIGA DE KARITÉ E RÁPIDA ABSORÇÃO.', 34.90, 120),
+(3, 'SHAMPOO NUTRITIVO 300ML', 'SHAMPOO COM ÓLEO DE ARGAN, IDEAL PARA CABELOS SECOS E DANIFICADOS.', 29.90, 100),
+(3, 'PALETA DE SOMBRAS NUDE', 'PALETA COM 12 CORES NEUTRAS DE LONGA DURAÇÃO E ALTA PIGMENTAÇÃO.', 59.90, 80),
+(3, 'PERFUME FEMININO EAU DE PARFUM 50ML', 'FRAGRÂNCIA FLORAL FRUTADA COM NOTAS DE BAUNILHA E JASMIM.', 149.90, 60),
+(3, 'PROTETOR SOLAR FPS 50', 'PROTETOR SOLAR FACIAL COM TOQUE SECO E ALTA PROTEÇÃO UVA/UVB.', 42.50, 150),
 
-(4, 'Arroz Integral 1kg', 'Arroz integral orgânico, fonte de fibras e ideal para dietas saudáveis.', 7.90, 200),
-(4, 'Feijão Preto 1kg', 'Feijão preto selecionado, ideal para preparo de feijoada e pratos típicos.', 8.50, 180),
-(4, 'Óleo de Coco 500ml', 'Óleo de coco extra virgem, prensado a frio, ideal para culinária e uso natural.', 22.90, 90),
-(4, 'Granola com Castanhas 250g', 'Granola crocante com castanhas e frutas secas, rica em fibras.', 14.90, 120),
-(4, 'Biscoito Integral de Aveia 150g', 'Biscoito integral com aveia e mel, sem adição de açúcar.', 5.99, 150),
+(4, 'ARROZ INTEGRAL 1KG', 'ARROZ INTEGRAL ORGÂNICO, FONTE DE FIBRAS E IDEAL PARA DIETAS SAUDÁVEIS.', 7.90, 200),
+(4, 'FEIJÃO PRETO 1KG', 'FEIJÃO PRETO SELECIONADO, IDEAL PARA PREPARO DE FEIJOADA E PRATOS TÍPICOS.', 8.50, 180),
+(4, 'ÓLEO DE COCO 500ML', 'ÓLEO DE COCO EXTRA VIRGEM, PRENSADO A FRIO, IDEAL PARA CULINÁRIA E USO NATURAL.', 22.90, 90),
+(4, 'GRANOLA COM CASTANHAS 250G', 'GRANOLA CROCANTE COM CASTANHAS E FRUTAS SECAS, RICA EM FIBRAS.', 14.90, 120),
+(4, 'BISCOITO INTEGRAL DE AVEIA 150G', 'BISCOITO INTEGRAL COM AVEIA E MEL, SEM ADIÇÃO DE AÇÚCAR.', 5.99, 150),
 
-(7, 'Carrinho de Controle Remoto', 'Carrinho elétrico com controle remoto, alcance de 30 metros.', 149.90, 50),
-(7, 'Quebra-Cabeça 500 Peças', 'Quebra-cabeça colorido com 500 peças, para todas as idades.', 59.90, 80),
-(7, 'Boneca Barbie Fashion', 'Boneca Barbie com roupas fashion e acessórios variados.', 89.90, 70),
-(7, 'Blocos de Montar 200 Peças', 'Conjunto de blocos de montar para estimular a criatividade.', 79.90, 100),
-(7, 'Jogo de Tabuleiro Estratégia', 'Jogo de tabuleiro para 2 a 4 jogadores, com foco em estratégia.', 99.90, 40),
+(7, 'CARRINHO DE CONTROLE REMOTO', 'CARRINHO ELÉTRICO COM CONTROLE REMOTO, ALCANCE DE 30 METROS.', 149.90, 50),
+(7, 'QUEBRA-CABEÇA 500 PEÇAS', 'QUEBRA-CABEÇA COLORIDO COM 500 PEÇAS, PARA TODAS AS IDADES.', 59.90, 80),
+(7, 'BONECA BARBIE FASHION', 'BONECA BARBIE COM ROUPAS FASHION E ACESSÓRIOS VARIADOS.', 89.90, 70),
+(7, 'BLOCOS DE MONTAR 200 PEÇAS', 'CONJUNTO DE BLOCOS DE MONTAR PARA ESTIMULAR A CRIATIVIDADE.', 79.90, 100),
+(7, 'JOGO DE TABULEIRO ESTRATÉGIA', 'JOGO DE TABULEIRO PARA 2 A 4 JOGADORES, COM FOCO EM ESTRATÉGIA.', 99.90, 40),
 
-(13, 'Conjunto de Panelas Antiaderentes 5 peças', 'Conjunto completo de panelas antiaderentes, com revestimento durável.', 299.90, 40),
-(13, 'Jogo de Talheres 24 peças', 'Jogo de talheres em aço inox, design moderno e resistente.', 149.90, 60),
-(13, 'Batedeira Elétrica 500W', 'Batedeira com múltiplas velocidades e tigela de aço inox.', 349.90, 25),
-(13, 'Cafeteira Elétrica 12 xícaras', 'Cafeteira elétrica com filtro removível e desligamento automático.', 199.90, 30),
-(13, 'Liquidificador 750W', 'Liquidificador potente com copo de vidro e várias velocidades.', 259.90, 50),
-(13, 'Espremedor de Frutas Manual', 'Espremedor manual prático para limões, laranjas e outras frutas.', 39.90, 100),
-(13, 'Jogo de Potes Herméticos 6 peças', 'Conjunto de potes herméticos para armazenamento de alimentos.', 79.90, 80),
-(13, 'Faqueiro Inox 48 peças', 'Faqueiro completo em inox, com design elegante e resistente.', 399.90, 20),
-(13, 'Panela de Pressão 4 litros', 'Panela de pressão com sistema de segurança e cabo ergonômico.', 179.90, 35),
-(13, 'Toalha de Mesa Retangular 1,5m', 'Toalha de mesa em tecido resistente, com estampa clássica.', 59.90, 90),
+(13, 'CONJUNTO DE PANELAS ANTIADERENTES 5 PEÇAS', 'CONJUNTO COMPLETO DE PANELAS ANTIADERENTES, COM REVESTIMENTO DURÁVEL.', 299.90, 40),
+(13, 'JOGO DE TALHERES 24 PEÇAS', 'JOGO DE TALHERES EM AÇO INOX, DESIGN MODERNO E RESISTENTE.', 149.90, 60),
+(13, 'BATEDEIRA ELÉTRICA 500W', 'BATEDEIRA COM MÚLTIPLAS VELOCIDADES E TIGELA DE AÇO INOX.', 349.90, 25),
+(13, 'CAFETEIRA ELÉTRICA 12 XÍCARAS', 'CAFETEIRA ELÉTRICA COM FILTRO REMOVÍVEL E DESLIGAMENTO AUTOMÁTICO.', 199.90, 30),
+(13, 'LIQUIDIFICADOR 750W', 'LIQUIDIFICADOR POTENTE COM COPO DE VIDRO E VÁRIAS VELOCIDADES.', 259.90, 50),
+(13, 'ESPREMEDOR DE FRUTAS MANUAL', 'ESPREMEDOR MANUAL PRÁTICO PARA LIMÕES, LARANJAS E OUTRAS FRUTAS.', 39.90, 100),
+(13, 'JOGO DE POTES HERMÉTICOS 6 PEÇAS', 'CONJUNTO DE POTES HERMÉTICOS PARA ARMAZENAMENTO DE ALIMENTOS.', 79.90, 80),
+(13, 'FAQUEIRO INOX 48 PEÇAS', 'FAQUEIRO COMPLETO EM INOX, COM DESIGN ELEGANTE E RESISTENTE.', 399.90, 20),
+(13, 'PANELA DE PRESSÃO 4 LITROS', 'PANELA DE PRESSÃO COM SISTEMA DE SEGURANÇA E CABO ERGONÔMICO.', 179.90, 35),
+(13, 'TOALHA DE MESA RETANGULAR 1,5M', 'TOALHA DE MESA EM TECIDO RESISTENTE, COM ESTAMPA CLÁSSICA.', 59.90, 90),
 
-(8, 'A Arte da Guerra', 'Livro clássico de estratégia militar escrito por Sun Tzu.', 39.90, 120),
-(8, 'Dom Casmurro', 'Romance de Machado de Assis sobre amor e ciúmes.', 29.90, 100),
-(8, 'O Pequeno Príncipe', 'História poética de Antoine de Saint-Exupéry, para todas as idades.', 34.90, 150),
-(8, '1984', 'Distopia de George Orwell que aborda temas de vigilância e controle.', 44.90, 90),
-(8, 'A Revolução dos Bichos', 'Fábula política de George Orwell sobre regimes totalitários.', 39.90, 80),
-(8, 'Harry Potter e a Pedra Filosofal', 'Primeiro livro da saga do jovem bruxo Harry Potter.', 49.90, 200),
-(8, 'O Senhor dos Anéis: A Sociedade do Anel', 'Livro de fantasia épica de J.R.R. Tolkien.', 59.90, 70),
-(8, 'Sapiens: Uma Breve História da Humanidade', 'Livro de Yuval Noah Harari que traça a evolução da humanidade.', 69.90, 60),
-(8, 'A Menina que Roubava Livros', 'Romance de Markus Zusak sobre a vida durante a Segunda Guerra Mundial.', 39.90, 110),
-(8, 'O Alquimista', 'Romance de Paulo Coelho sobre busca e autoconhecimento.', 29.90, 130);
+(8, 'A ARTE DA GUERRA', 'LIVRO CLÁSSICO DE ESTRATÉGIA MILITAR ESCRITO POR SUN TZU.', 39.90, 120),
+(8, 'DOM CASMURRO', 'ROMANCE DE MACHADO DE ASSIS SOBRE AMOR E CIÚMES.', 29.90, 100),
+(8, 'O PEQUENO PRÍNCIPE', 'HISTÓRIA POÉTICA DE ANTOINE DE SAINT-EXUPÉRY, PARA TODAS AS IDADES.', 34.90, 150),
+(8, '1984', 'DISTOPIA DE GEORGE ORWELL QUE ABORDA TEMAS DE VIGILÂNCIA E CONTROLE.', 44.90, 90),
+(8, 'A REVOLUÇÃO DOS BICHOS', 'FÁBULA POLÍTICA DE GEORGE ORWELL SOBRE REGIMES TOTALITÁRIOS.', 39.90, 80),
+(8, 'HARRY POTTER E A PEDRA FILOSOFAL', 'PRIMEIRO LIVRO DA SAGA DO JOVEM BRUXO HARRY POTTER.', 49.90, 200),
+(8, 'O SENHOR DOS ANÉIS: A SOCIEDADE DO ANEL', 'LIVRO DE FANTASIA ÉPICA DE J.R.R. TOLKIEN.', 59.90, 70),
+(8, 'SAPIENS: UMA BREVE HISTÓRIA DA HUMANIDADE', 'LIVRO DE YUVAL NOAH HARARI QUE TRAÇA A EVOLUÇÃO DA HUMANIDADE.', 69.90, 60),
+(8, 'A MENINA QUE ROUBAVA LIVROS', 'ROMANCE DE MARKUS ZUSAK SOBRE A VIDA DURANTE A SEGUNDA GUERRA MUNDIAL.', 39.90, 110),
+(8, 'O ALQUIMISTA', 'ROMANCE DE PAULO COELHO SOBRE BUSCA E AUTOCONHECIMENTO.', 29.90, 130);
 
-select * from ecommerce.produto
+SELECT * FROM ECOMMERCE.PRODUTO
 
 
-cliente_id, endereco_id, data_pedido, valor_total, status = pendente
+CLIENTE_ID, ENDERECO_ID, DATA_PEDIDO, VALOR_TOTAL, STATUS = PENDENTE
 
 INSERT INTO ECOMMERCE.PEDIDO(CLIENTE_ID, ENDERECO_ID, DATA_PEDIDO, VALOR_TOTAL, STATUS) VALUES
-(3, 5, '2025-08-28 14:23:00', 139.90, 'Processando'),
-(7, 12, '2025-08-29 09:15:00', 397.50, 'Pendente'),
-(1, 1, '2025-08-30 17:45:00', 3299.00, 'Cancelado'),
-(15, 18, '2025-08-31 12:30:00', 2048.9, 'Enviado'),
-(9, 9, '2025-09-01 11:00:00', 349.80, 'Enviado'),
-(12, 3, '2025-09-01 16:10:00', 249.60, 'Entregue');
+(3, 5, '2025-08-28 14:23:00', 139.90, 'PROCESSANDO'),
+(7, 12, '2025-08-29 09:15:00', 397.50, 'PENDENTE'),
+(1, 1, '2025-08-30 17:45:00', 3299.00, 'CANCELADO'),
+(15, 18, '2025-08-31 12:30:00', 2048.9, 'ENVIADO'),
+(9, 9, '2025-09-01 11:00:00', 349.80, 'ENVIADO'),
+(12, 3, '2025-09-01 16:10:00', 249.60, 'ENTREGUE');
 
-select * from ecommerce.pedido
+SELECT * FROM ECOMMERCE.PEDIDO
 
-select *
-from ecommerce.cliente
-where cliente_id in (3,7,1,15,9,12)
+SELECT *
+FROM ECOMMERCE.CLIENTE
+WHERE CLIENTE_ID IN (3,7,1,15,9,12)
 
-select *
-from ecommerce.endereco_de_entrega
-where cliente_id in (5,12,1,18,9,3)
+SELECT *
+FROM ECOMMERCE.ENDERECO_DE_ENTREGA
+WHERE CLIENTE_ID IN (5,12,1,18,9,3)
 
-insert into ecommerce.item_do_pedido(pedido_id, produto_id, quantidade) values 
+INSERT INTO ECOMMERCE.ITEM_DO_PEDIDO(PEDIDO_ID, PRODUTO_ID, QUANTIDADE) VALUES 
 (7, 1, 1),
 (8, 4, 5),
 (9, 7, 1),
@@ -165,3 +165,14 @@ insert into ecommerce.item_do_pedido(pedido_id, produto_id, quantidade) values
 (12, 17, 1),
 (12, 19, 1);
 
+
+INSERT INTO ECOMMERCE.PAGAMENTO(PEDIDO_ID, FORMA_PAGAMENTO, STATUS, DATA_PAGAMENTO)
+VALUES  (7, 'CARTÃO DE CRÉDITO', 'APROVADO', '2025-08-28 14:33:00-03'),
+		(8,'CARTÃO DE CRÉDITO', 'PENDENTE', '2025-08-29 09:15:00-03'),
+		(9,'CARTÃO DE CRÉDITO', 'RECUSADO', '2025-08-30 17:48:00-03'),
+		(10,'PIX', 'APROVADO', '2025-08-31 12:30:00-03'),
+		(11,'BOLETO', 'APROVADO', '2025-09-02 11:06:00-03'),
+		(12,'TRANSFERÊNCIA', 'APROVADO', '2025-09-01 16:19:00-03');
+
+
+SELECT * FROM ECOMMERCE.PAGAMENTO

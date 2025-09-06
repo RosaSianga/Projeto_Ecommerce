@@ -16,7 +16,7 @@ public class ProdutoService {
         produtoRepository = repo;
     }
 
-    public List<Produto> listarTodosProdutos(){
+    public List<Produto> listarProdutos(){
         return produtoRepository.findAll();
     }
 }

@@ -18,7 +18,7 @@ public class ClienteService {
     }
 
     //Lista todos os clientes
-    public List<Cliente> listarTodos(){
+    public List<Cliente> listarClientes(){
 
         // findAll vem do JpaRepository -  buscar tudo
         return clienteRepository.findAll();
