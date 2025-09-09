@@ -3,9 +3,7 @@ package br.com.ecommerce.api.controller;
 import br.com.ecommerce.api.model.EnderecoDeEntrega;
 import br.com.ecommerce.api.service.EnderecoDeEntregaService;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -23,5 +21,11 @@ public class EnderecoDeEntregaController {
     public ResponseEntity<List<EnderecoDeEntrega>> listarEnderecos(){
         List<EnderecoDeEntrega> enderecos = enderecoDeEntregaService.listarEnderecos();
         return ResponseEntity.ok(enderecos);
+    }
+
+    @PostMapping
+    public ResponseEntity <EnderecoDeEntrega> cadastrarEnderco(@RequestBody EnderecoDeEntrega enderecoDeEntrega){
+        EnderecoDeEntrega novoEndereco = enderecoDeEntregaService.cadastrarEndereco(enderecoDeEntrega);
+        return ResponseEntity.ok(novoEndereco);
     }
 }

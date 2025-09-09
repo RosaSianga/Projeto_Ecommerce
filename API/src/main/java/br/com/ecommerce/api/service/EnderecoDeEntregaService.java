@@ -19,4 +19,8 @@ public class EnderecoDeEntregaService {
     public List<EnderecoDeEntrega> listarEnderecos(){
         return enderecoDeEntregaRepository.findAll();
     }
+
+    public EnderecoDeEntrega cadastrarEndereco(EnderecoDeEntrega enderecoDeEntrega){
+        return enderecoDeEntregaRepository.save(enderecoDeEntrega);
+    }
 }

@@ -19,4 +19,8 @@ public class CategoriaService {
     public List<Categoria> listarCategorias(){
         return categoriaRepository.findAll();
     }
+
+    public Categoria cadastrarCategoria(Categoria categoria){
+        return categoriaRepository.save(categoria);
+    }
 }
