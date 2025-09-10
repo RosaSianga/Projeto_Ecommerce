@@ -19,22 +19,43 @@ public class ClienteService {
     }
 
     //Lista todos os clientes
-    public List<Cliente> listarClientes(){
+    public List<Cliente> listarClientes() {
         // findAll vem do JpaRepository -  buscar tudo
         return clienteRepository.findAll();
     }
 
-    public Cliente cadastrarCliente(Cliente cliente){
+    public Cliente cadastrarCliente(Cliente cliente) {
         //Save = Insert into
         return clienteRepository.save(cliente);
     }
 
     public Cliente buscarClientePorId(Integer id) {
-        Optional<Cliente> cliente = clienteRepository.findById(id);
-        if(cliente.isEmpty()) {
+//        Optional<Cliente> cliente = clienteRepository.findById(id);
+//        if(cliente.isEmpty()) {
+//            return null;
+//        }
+//        return cliente.get();
+        return clienteRepository.findById(id).orElse(null);
+    }
+
+    public Cliente atualizarCliente(Integer id, Cliente novocliente) {
+        Cliente clienteExistente = buscarClientePorId(id);
+
+        if (clienteExistente == null) {
             return null;
         }
-        return cliente.get();
-        // return produtoRepository.findById(id).orElse(null);
+        clienteExistente.setNomeCompleto(novocliente.getNomeCompleto());
+
+        return clienteRepository.save(clienteExistente);
+    }
+
+    public Cliente deletarClientePorId(Integer id) {
+        Cliente cliente = buscarClientePorId(id);
+
+        if (cliente == null) {
+            return null;
+        }
+        clienteRepository.delete(cliente);
+        return cliente;
     }
 }
