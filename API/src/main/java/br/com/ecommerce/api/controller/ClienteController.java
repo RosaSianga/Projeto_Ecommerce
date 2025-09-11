@@ -26,20 +26,6 @@ public class ClienteController {
         return ResponseEntity.ok(clientes);
     }
 
-
-    @PostMapping
-    public ResponseEntity<Cliente> cadastrarClientes(@RequestBody Cliente clientes) {
-        Cliente novoCliente = clienteService.cadastrarCliente(clientes);
-        return ResponseEntity.ok(novoCliente); // Retorno 200
-        //return ResponseEntity.status(HttpStatus.CREATED).body(novoCliente); // Retorno 201
-    }
-    //@RequestBody vai receber informação no corpo da requisição
-    //@PathVariable recebe a informação no link da requisição
-
-    // 1- Procurar o valor
-    // 2 - Senão encontrar, retornar o erro
-    // 3 - Se encontrar, retornar o resultado
-
     @GetMapping("/{id}")
     public ResponseEntity<Cliente> ConsultarPeloId(@PathVariable Integer id) {
         //Variavel precisa ser identica a informação do caminho
@@ -54,6 +40,19 @@ public class ClienteController {
         // 3 - Se encontrar, retornar o resultado
         return ResponseEntity.ok(cliente);
     }
+
+    @PostMapping
+    public ResponseEntity<Cliente> cadastrarClientes(@RequestBody Cliente clientes) {
+        Cliente novoCliente = clienteService.cadastrarCliente(clientes);
+        return ResponseEntity.ok(novoCliente); // Retorno 200
+        //return ResponseEntity.status(HttpStatus.CREATED).body(novoCliente); // Retorno 201
+    }
+    //@RequestBody vai receber informação no corpo da requisição
+    //@PathVariable recebe a informação no link da requisição
+
+    // 1- Procurar o valor
+    // 2 - Senão encontrar, retornar o erro
+    // 3 - Se encontrar, retornar o resultado
 
     @PutMapping("/{id}")
     public ResponseEntity<Cliente> atualizarCliente(@PathVariable Integer id, @RequestBody Cliente cliente) {

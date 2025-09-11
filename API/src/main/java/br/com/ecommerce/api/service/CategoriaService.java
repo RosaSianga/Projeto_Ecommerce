@@ -23,4 +23,29 @@ public class CategoriaService {
     public Categoria cadastrarCategoria(Categoria categoria){
         return categoriaRepository.save(categoria);
     }
+
+    public Categoria pesquisarPorId(Integer id){
+        return categoriaRepository.findById(id).orElse(null);
+    }
+
+    public Categoria atualizarCategoria(Integer id, Categoria categoriaAtualizada){
+        Categoria categoriaExstente = pesquisarPorId(id);
+        if(categoriaExstente == null){
+            return null;
+        }
+        categoriaAtualizada.setNomeCategoria(categoriaExstente.getNomeCategoria());
+        categoriaAtualizada.setDescricao(categoriaExstente.getDescricao());
+
+        return categoriaRepository.save(categoriaAtualizada);
+    }
+
+    public Categoria deletarCategoria(Integer id){
+        Categoria categoriaExistente = pesquisarPorId(id);
+        if(categoriaExistente == null){
+            return null;
+        }
+        categoriaRepository.delete(categoriaExistente);
+        return categoriaExistente;
+    }
+
 }

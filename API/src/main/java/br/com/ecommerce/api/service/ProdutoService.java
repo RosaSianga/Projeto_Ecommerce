@@ -9,18 +9,49 @@ import java.util.List;
 @Service
 public class ProdutoService {
 
+    // Injeção de Dependência
     private final ProdutoRepository produtoRepository;
 
+    //Construtor
     public ProdutoService(ProdutoRepository repo){
-
         produtoRepository = repo;
     }
 
+    //Pesquisar todos
     public List<Produto> listarProdutos(){
         return produtoRepository.findAll();
     }
 
+    //Cadastrar
     public Produto cadastrarProduto(Produto produto){
+
         return produtoRepository.save(produto);
+    }
+
+    //Pesquisa por ID
+    public Produto buscarProdutoPorId(int id){
+        return produtoRepository.findById(id).orElse(null);
+    }
+
+    //Atualizar
+    public Produto atualizarProduto(Integer id, Produto produtonovo){
+        Produto produtoExistente = buscarProdutoPorId(id);
+        if (produtoExistente == null) {
+            return null;
+        }
+        produtoExistente.setNomeProduto(produtonovo.getNomeProduto());
+        return produtoRepository.save(produtoExistente);
+    }
+
+    //Deletar
+    public Produto deletarProduto(Integer id){
+        Produto produtoExistente = buscarProdutoPorId(id);
+
+        if (produtoExistente == null) {
+            return null;
+        }
+        produtoRepository.delete(produtoExistente);
+        return produtoExistente;
+
     }
 }

@@ -4,6 +4,7 @@ import br.com.ecommerce.api.model.Cliente;
 import br.com.ecommerce.api.repository.ClienteRepository;
 import org.springframework.stereotype.Service;
 
+import java.time.OffsetDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +27,7 @@ public class ClienteService {
 
     public Cliente cadastrarCliente(Cliente cliente) {
         //Save = Insert into
+        cliente.setDataCadastro(OffsetDateTime.now());
         return clienteRepository.save(cliente);
     }
 
