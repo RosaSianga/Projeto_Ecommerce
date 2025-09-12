@@ -23,9 +23,36 @@ public class EnderecoDeEntregaController {
         return ResponseEntity.ok(enderecos);
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<?>  buscarEnderecoPorId(@PathVariable Integer id){
+        EnderecoDeEntrega enderecoDeEntrega = enderecoDeEntregaService.buscarEnderecoPorId(id);
+        if(enderecoDeEntrega == null){
+            return ResponseEntity.badRequest().body("Endereço não encontrado");
+        }
+        return ResponseEntity.ok(enderecoDeEntrega);
+    }
+
     @PostMapping
     public ResponseEntity <EnderecoDeEntrega> cadastrarEnderco(@RequestBody EnderecoDeEntrega enderecoDeEntrega){
         EnderecoDeEntrega novoEndereco = enderecoDeEntregaService.cadastrarEndereco(enderecoDeEntrega);
         return ResponseEntity.ok(novoEndereco);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity <?> atualizarEndereco(@PathVariable Integer id,  @RequestBody EnderecoDeEntrega enderecoDeEntregaAtualizado){
+        EnderecoDeEntrega enderecoExistente = enderecoDeEntregaService.atualizarEndereco(id, enderecoDeEntregaAtualizado);
+        if (enderecoExistente == null){
+            return ResponseEntity.badRequest().body("Endereço não encontrado");
+        }
+        return ResponseEntity.ok(enderecoDeEntregaAtualizado);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity <?> deletarEndereco(@PathVariable Integer id){
+        EnderecoDeEntrega enderecoDeletado = enderecoDeEntregaService.deletarEndereco(id);
+        if (enderecoDeletado == null){
+            return ResponseEntity.badRequest().body("Endereço não encontrado");
+        }
+        return ResponseEntity.ok(enderecoDeletado);
     }
 }

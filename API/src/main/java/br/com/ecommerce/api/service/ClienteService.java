@@ -2,6 +2,7 @@ package br.com.ecommerce.api.service;
 
 import br.com.ecommerce.api.model.Cliente;
 import br.com.ecommerce.api.repository.ClienteRepository;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.time.OffsetDateTime;
@@ -22,7 +23,7 @@ public class ClienteService {
     //Lista todos os clientes
     public List<Cliente> listarClientes() {
         // findAll vem do JpaRepository -  buscar tudo
-        return clienteRepository.findAll();
+        return clienteRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
     }
 
     public Cliente cadastrarCliente(Cliente cliente) {
@@ -46,7 +47,12 @@ public class ClienteService {
         if (clienteExistente == null) {
             return null;
         }
+
         clienteExistente.setNomeCompleto(novocliente.getNomeCompleto());
+        clienteExistente.setEmail(novocliente.getEmail());
+        clienteExistente.setSenha(novocliente.getSenha());
+        clienteExistente.setTelefone(novocliente.getTelefone());
+        clienteExistente.setDataCadastro(OffsetDateTime.now());
 
         return clienteRepository.save(clienteExistente);
     }

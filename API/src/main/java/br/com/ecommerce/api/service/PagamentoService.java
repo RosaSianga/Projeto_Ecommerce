@@ -27,4 +27,30 @@ public class PagamentoService {
     public Pagamento cadastrarPagamento(Pagamento pagamento){
         return pagamentoRepository.save(pagamento);
     }
+
+    public Pagamento buscarPagamentoPorId(Integer id){
+        return pagamentoRepository.findById(id).orElse(null);
+    }
+
+    public Pagamento atualizarPagamento(Integer id, Pagamento pagamentoNovo){
+        Pagamento pagamentoExistente = buscarPagamentoPorId(id);
+        if (pagamentoExistente == null){
+            return null;
+        }
+
+        pagamentoExistente.setFormaPagamento(pagamentoNovo.getFormaPagamento());
+        pagamentoExistente.setDataPagamento(pagamentoNovo.getDataPagamento());
+
+        pagamentoRepository.save(pagamentoExistente);
+        return pagamentoExistente;
+    }
+
+    public Pagamento deletarPagamento (Integer id){
+        Pagamento pagamentoExistente = buscarPagamentoPorId(id);
+        if (pagamentoExistente == null){
+            return null;
+        }
+        pagamentoRepository.delete(pagamentoExistente);
+        return pagamentoExistente;
+    }
 }

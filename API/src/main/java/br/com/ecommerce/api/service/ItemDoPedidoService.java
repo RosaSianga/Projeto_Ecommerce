@@ -21,8 +21,35 @@ public class ItemDoPedidoService {
         return itemDoPedidoRepository.findAll();
     }
 
-    public ItemDoPedido cadastrarItemDoPedido(@RequestBody ItemDoPedido itemDoPedido){
+    public ItemDoPedido cadastrarItemDoPedido(ItemDoPedido itemDoPedido){
         return itemDoPedidoRepository.save(itemDoPedido);
+    }
+
+    public ItemDoPedido buscarItemDoPedidoPorId(Integer id){
+        return itemDoPedidoRepository.findById(id).orElse(null);
+    }
+
+    public ItemDoPedido atualizarItemDoPedido(Integer id, ItemDoPedido itemPedidoNovo){
+        ItemDoPedido itemPedidoExistente = buscarItemDoPedidoPorId(id);
+        if (itemPedidoExistente == null) {
+            return null;
+        }
+
+        itemPedidoExistente.setPedido(itemPedidoNovo.getPedido());
+        itemPedidoExistente.setProduto(itemPedidoNovo.getProduto());
+        itemPedidoExistente.setQuantidade(itemPedidoNovo.getQuantidade());
+
+        itemDoPedidoRepository.save(itemPedidoExistente);
+        return itemPedidoExistente;
+    }
+
+    public ItemDoPedido deletarItemDoPedido(Integer id){
+        ItemDoPedido itemPedidoExistente = buscarItemDoPedidoPorId(id);
+        if (itemPedidoExistente == null) {
+            return null;
+        }
+        itemDoPedidoRepository.delete(itemPedidoExistente);
+        return itemPedidoExistente;
     }
 
 }

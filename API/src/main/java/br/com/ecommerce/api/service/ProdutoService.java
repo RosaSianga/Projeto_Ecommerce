@@ -2,6 +2,7 @@ package br.com.ecommerce.api.service;
 
 import br.com.ecommerce.api.model.Produto;
 import br.com.ecommerce.api.repository.ProdutoRepository;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +20,8 @@ public class ProdutoService {
 
     //Pesquisar todos
     public List<Produto> listarProdutos(){
-        return produtoRepository.findAll();
+
+        return produtoRepository.findAll(Sort.by(Sort.Direction.ASC, "id"));
     }
 
     //Cadastrar

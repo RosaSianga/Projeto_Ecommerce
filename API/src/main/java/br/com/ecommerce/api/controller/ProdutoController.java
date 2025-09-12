@@ -38,11 +38,11 @@ public class ProdutoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Produto> atualizarProduto(@PathVariable Integer id, @RequestBody Produto produtoAtualizado){
-        Produto produtoExistente = produtoService.atualizarProduto(id, produtoAtualizado);
-        if (produtoExistente == null) {
+        Produto produto = produtoService.atualizarProduto(id, produtoAtualizado);
+        if (produto == null) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(produtoExistente);
+        return ResponseEntity.ok(produto);
     }
 
     @DeleteMapping("/{id}")
